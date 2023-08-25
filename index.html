@@ -5,10 +5,15 @@
 </head>
 <body>
   <h1 id="huh">CSS is for the weak.</h1>
+  <img id="xkcd_comic"/>
   
   <script>
     const huhs = ['CSS is for the weak.', 'OwO', 'Haiiii!!!! >w<', 'I love you Neo!!!!!', 'The fuck is a web dev?', 'C is better then Rust', 'TypeScript? There never was a TypeScript bro.', 'I <3 jQuery', 'I <3 HTML'];
     var huh_number = Math.floor(Math.random() * huhs.length)
     $('#huh').html(huhs[huh_number]);
+
+    $.getJSON('https://xkcd.com/info.0.json', function(json) {
+      $('#xkcd_comic').attr('src') = json.img;
+    });
   </script>
 </body>
