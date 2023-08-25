@@ -8,6 +8,7 @@
   
   <script>
     const huhs = ['CSS is for the weak.', 'OwO', 'Haiiii!!!! >w<', 'I love you Neo!!!!!', 'The fuck is a web dev?'];
-    $('#huh').html(huhs[Math.floor(Math.random() * huhs.length)]);
+    var huh_number = Math.floor(Math.random() * huhs.length)
+    $('#huh').html(huhs[huh_number]);
   </script>
 </body>
